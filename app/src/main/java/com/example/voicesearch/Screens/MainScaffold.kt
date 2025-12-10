@@ -47,7 +47,7 @@ fun MainScaffold() {
     var isListening by remember { mutableStateOf(false) }
     var transcript by remember { mutableStateOf("") }
 
-    // Permission launcher
+
     val permissionLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.RequestPermission(),
         onResult = { granted ->
@@ -61,7 +61,7 @@ fun MainScaffold() {
         }
     )
 
-    // Request permission when this composable enters composition (if not already granted)
+
     LaunchedEffect(Unit) {
         if (context.checkSelfPermission(Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
             permissionLauncher.launch(Manifest.permission.RECORD_AUDIO)
