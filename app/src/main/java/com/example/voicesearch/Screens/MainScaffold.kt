@@ -68,7 +68,7 @@ fun MainScaffold() {
         }
     }
 
-    // SpeechRecognizer instance lifecycle
+
     val speechRecognizer = remember {
         if (SpeechRecognizer.isRecognitionAvailable(context)) {
             SpeechRecognizer.createSpeechRecognizer(context)
