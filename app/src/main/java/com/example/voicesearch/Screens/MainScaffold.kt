@@ -81,7 +81,7 @@ fun MainScaffold() {
         }
     }
 
-    // Set up recognition listener
+
     LaunchedEffect(speechRecognizer) {
         speechRecognizer?.setRecognitionListener(object : RecognitionListener {
             override fun onReadyForSpeech(p0: Bundle?) { /* no-op */ }
